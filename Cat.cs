@@ -66,6 +66,7 @@ namespace Class_260221
         public void WakeUp()
         {
             messy_level = 100;
+            Max_messy_level(age);
             hungry = true;
         }
 
@@ -186,6 +187,11 @@ namespace Class_260221
             }
         }
 
-
+        public override string ToString()
+        {
+            string is_hungry = hungry ? "Yes" : "No";
+            return $"Cat's name: {name}\n\t-Age: {age}\n\t-Breed: {breed}\n\t-Color: {color}\n\t-Messy Level: {messy_level}\n\t-Consumption: {consumption}\n\t-Is hungry: {is_hungry}\n\t-Sex: {sex}";
+            /*int age, string name, int weight, string breed, string color, int messy_level, int consumption, bool hungry, string sex*/
+        }
     }
 }
